@@ -79,6 +79,9 @@ dmypy.json
 # Skills
 # ========================================
 
+# Equity analysis reports
+equity-initial-analysis/reports/
+
 # Logs
 *.log
 logs/
