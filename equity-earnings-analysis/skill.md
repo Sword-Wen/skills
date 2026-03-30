@@ -387,6 +387,18 @@ pie title 本季度营收构成（按业务板块）
 
 ## 数据来源要求
 
+### 美股财报数据获取优先级
+
+当分析对象为美股上市公司时，应优先通过 `equity-financial-fetch` skill 获取财报数据：
+
+1. **首选**：使用 `equity-financial-fetch` skill 调用 StockAnalysis 工具获取 SEC API 官方数据
+2. **备选**：当 skill 不可用时，通过 Web 搜索获取 Yahoo Finance、Seeking Alpha 等平台数据
+
+**调用方式**：
+```
+请使用 equity-financial-fetch skill 获取 {股票代码} 的财报数据
+```
+
 ### 财务数据
 - **优先**：公司正式发布的财报数据（如美股企业应采集自SEC.gov中的标准化数据）
 - 交易所公告
